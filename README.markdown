@@ -2,7 +2,7 @@
 Links to starts
 ===============
 
-* [TPL Dataflow API doc (en)](http://msdn.microsoft.com/en-us/library/hh194784(v=vs.110).aspx)
+* <a href="http://msdn.microsoft.com/en-us/library/hh194784(v=vs.110).aspx">TPL Dataflow API doc (en)</a>
 * [Introduction à TPL DataFlow en C# (french)](http://msdn.microsoft.com/fr-fr/vcsharp/hh301085)
 * [Task Parallel Library in .NET 4.0 – Part 1](http://codingndesign.com/blog/?p=195)
 * [Task Parallel Library in .NET 4.0 – Part 2](http://codingndesign.com/blog/?p=198)
