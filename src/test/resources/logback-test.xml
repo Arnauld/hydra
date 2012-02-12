@@ -7,6 +7,8 @@
 	</appender>
 	
 	<logger name="ch.qos.logback" level="warn" />
+	
+	<logger name="org.technbolts.hydra.task" level="trace"/>
 	<logger name="org.technbolts.hydra.dataflow" level="debug" />
 	<logger name="org.technbolts.hydra.dataflow.JoinBlock" level="trace" />
 

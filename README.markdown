@@ -3,6 +3,7 @@ Links to starts
 ===============
 
 * <a href="http://msdn.microsoft.com/en-us/library/hh194784(v=vs.110).aspx">TPL Dataflow API doc (en)</a>
+* [Threading in C#](http://www.albahari.com/threading/part5.aspx)
 * [Introduction à TPL DataFlow en C# (french)](http://msdn.microsoft.com/fr-fr/vcsharp/hh301085)
 * [Sous le capot : Etude de la Task Parallel Library](http://blogs.msdn.com/b/eternalcoding/archive/2011/05/16/fr-sous-le-capot-etude-de-la-task-parallel-library.aspx)
 
