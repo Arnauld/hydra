@@ -26,6 +26,11 @@ public enum TaskStatus {
      */
     RanToCompletion,
     /**
+     * The task itself completed execution successfully, it may still be possible that child tasks
+     * are executing or waiting to be scheduled. 
+     */
+    SelfRanToCompletion,
+    /**
      * The task acknowledged cancellation by throwing an OperationCanceledException with its
      * own CancellationToken while the token was in signaled state, or the task's 
      * CancellationToken was already signaled before the task started executing. 
@@ -34,5 +39,16 @@ public enum TaskStatus {
     /**
      * The task completed due to an unhandled exception.
      */
-    Faulted 
+    Faulted;
+
+    /**
+     * @param ordinal
+     * @return
+     */
+    public static TaskStatus valueOf(int ordinal) {
+        for(TaskStatus status : values())
+            if(status.ordinal() == ordinal)
+                return status;
+        return null;
+    } 
 }

@@ -9,6 +9,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.technbolts.hydra.dataflow.Dataflow;
 
+import fj.Effect;
+import fj.F;
+import fj.F2;
+
 public class Tasks {
     private static Logger logger = LoggerFactory.getLogger(Dataflow.class);
 
@@ -38,6 +42,27 @@ public class Tasks {
                 return thr;
             }
         });
+    }
+    
+    public static <ARG, T> TaskEffectAdapter<ARG, T> newTask(F<ARG, T> func) {
+        return new TaskEffectAdapter<ARG, T>(func);
+    }
+    
+    public static <ARG, T> TaskEffectAdapter<ARG, T> newTask(String taskName, F<ARG, T> func) {
+        return new TaskEffectAdapter<ARG, T>(taskName, func);
+    }
+    
+    public static <ARG, T> TaskEffectAdapter<ARG, T> newTask(F2<TaskEffectAdapter<ARG, T>, ARG, T> func) {
+        return new TaskEffectAdapter<ARG, T>(func);
+    }
+    
+    public static <ARG, T> TaskEffectAdapter<ARG, T> newTask(String taskName, F2<TaskEffectAdapter<ARG, T>, ARG, T> func) {
+        return new TaskEffectAdapter<ARG, T>(taskName, func);
+    }
+
+    
+    public static <T> TaskResultCallback<T> effectToCallback(Effect<T> effect) {
+        return new TaskResultCallbackEffectAdapter<T>(effect);
     }
 
 }
